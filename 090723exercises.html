@@ -98,7 +98,7 @@ function outer() {
 	inner();//This is where/how a function is called
 }
 
-outer();//Not sure why I have problems remembering these.
+outer();//Not sure why I have problems remembering how we call theses.
 
 //ecxercise 6
 console.log(trees1);//tried to print variable prior to declaration of the variable
@@ -120,8 +120,27 @@ console.log(trees1);//tried to print variable prior to declaration of the variab
     // but scoped locally, so I can avoid error messages.
 
  //exercise 7
+ function counter(step){
+    let count=0;
+    return function increaseCount(){
+        count+=step;// a "-" would be a negative counter, "subtraction"
+        return count;
+    };
+ }
+ let add1=counter(4);
+ let add10=counter(10);
 
+ add1();
+ console.log(add1());//not sure why this returns an 8, I thought I was going
+ //to return a 4.
 
+ add10();
+ console.log(add10());//And this console.log gives me 20
+ // the increase count function has access to the counter function, which
+ //basically allows the outer and inner function to work together to define a
+ //step and define an increment for that step.
+
+ 
 
 
 
