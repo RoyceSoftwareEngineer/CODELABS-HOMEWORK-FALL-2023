@@ -75,15 +75,62 @@ let Variable="Mustang";
         console.log(Variable);// Now returns "Ford"
 
         function newScopeVar(){
-            let Variable= "newCar"
-
-        
+            let Variable= "newCar" 
         }
         console.log(ChangeVariable);
         console.log(newScopeVar);
         //Both of these just return the function? I need more study here.
 
 //exercise 5
+function difference(x, y){
+    return Math.abs(x-y);
+}
+console.log(difference(100, 56));// Not what I'm trying to do, but returned
+//an interesting output.
+
+function outer() {
+	let outerVariable = 'This is my outer variable';
+
+	function inner() {
+		console.log('This is my inner variable,', outerVariable);
+	}
+
+	inner();//This is where/how a function is called
+}
+
+outer();//Not sure why I have problems remembering these.
+
+//ecxercise 6
+console.log(trees1);//tried to print variable prior to declaration of the variable
+    let trees="pinesAndOaks";// under let the result an error as I called the variable 
+    //before I defined it.
+    const trees2="CedarsAndWalnuts"//Same as let above
+
+    var trees1='MaplesAndRedbuds';// Returned Undefined- that I did not expect
+
+    let cars="JeepsAndTrucks";
+    const beaches= 'florida';
+    var money= 'dollarsAnd Euros';
+    console.log(cars);// this worked as expected
+    console.log(beaches); //This worked as expected
+    console.log(money);// worked as expected
+    
+    {let cars= "Trucks";
+    console.log(cars)}//Here I have the same variable name with a different value,
+    // but scoped locally, so I can avoid error messages.
+
+ //exercise 7
+
+
+
+
+
+
+
+
+
+
+
 
 
 
