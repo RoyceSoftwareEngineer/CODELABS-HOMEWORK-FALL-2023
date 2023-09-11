@@ -7,6 +7,8 @@
 </head>
 <h1> This is homework for JS intermediate Concepts 09/11/2023</h1>
 
+<h2> use dev tools and open the console to view JS work</h2>
+
 <body>
 <script>
 
@@ -103,12 +105,67 @@ console.log(calculator.add(5,3));//  Retunst 8. his is neat, static methods
 // seem like they present more use cases as well. Helps me to wrap my head around the
 // code as I build things that I can imagine a real world application for.
 
+//private class fields
+class Circle{
+    #radius;
+    constructor(radius){
+        this.#radius = radius;
+    }
+    getArea(){
+        return Math.PI * this.#radius * this.#radius;
+    }
+}
+const circle = new Circle(1);
+console.log(circle.getArea());// returns the area, but not the radius
+// which is "private" in this case. 
+// I removed the # from radius to see what would happen and I still only returned the
+//area. see below:
+class Circle1{
+    radius;
+    constructor(radius){
+        this.radius = radius;
+    }
+    getArea(){
+        return Math.PI * this.radius * this.radius;
+    }
+}
+const circle1 = new Circle(1);
+console.log(circle.getArea());
+// I dont see a difference- need to study prive class fields further
 
+// THe "this" keyword in classes
+class Dog{
+    constructor(name){
+        this.name=name;// "this" refers to the instance, in this case Dog
+    }
+}
 
+//Inside class methods: This refers to the object on which the method is called
+class cat{
+    constructor(name){
+        this.name=name;
+    }
+    meow(){
+        console.log(`${this.name} says meow`);//'this' refers to cat class
+    }
+}
+const Taro=new cat('Taro');
+Taro.meow();// returns taro says meow
 
+// static methods are associated with the class, not an instance. The cannot be called on
+//instances and usually serve utility purposes.
+//Example
+class Utils{
+    static squareNumber(num){
+        return num * num;
+    }
+}
+console.log(Utils.squareNumber(4));// returns the square of the number
+//I can see real world use cases for static methods like this.
 
-
-
+//getters and setters:
+//these are special methods that provide a way to access and set private class properties. 
+//They can also include additional logic
 
 
 
