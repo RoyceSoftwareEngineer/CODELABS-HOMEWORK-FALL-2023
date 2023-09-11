@@ -5,20 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1> This is homework for JS intermediate Concepts</h1>
+<h1> This is homework for JS intermediate Concepts 09/11/2023</h1>
 
 <body>
 <script>
 
+// "this" in global binding
+//console.log ("this' in Glogal Scope", this);
+
+//"This is implicit binding"
+const classroom={
+    name:'High Five',
+    students: ['Valory', 'Zane', 'Joey'],
+    printStudents: function(){
+        console.log("this' in implicit scope(Function Dec):", this.students);
+
+    },
+    printStudentsES6: ()=>console.log("this' in Implicit Scope(ES6):",this.students),
+
+};
+classroom.printStudents();// returns student array
+classroom.printStudentsES6();//returns undefined
+
+//explicit binding
+const getName=function () {
+    console.log("This' in explicit Scope:",this.name);
+
+};
+const player={ 
+    name: 'Royce',
+    isHappy: true,
+    isTall: false,
+};
+getName.call(player);//returns "royce"
+
+//when using implicit binding, what typpe of fucntion
+//do I use to ensure "this" does not apply to the window 
+//object?
+
+//constructor binding
+function Company(name){
+    this.name=name;
+}
+const codefi= new Company('Codefi');
+console.log("this' in Constructor Scope:", codefi.name);
+//returns "this' in constructor scope: Codefi"
 
 
+// basic class definition
+class Animal{
+    constructor(name){
+        this.name=name;
+    }
+    speak(){
+        console.log(`${this.name} makes a sound!`);
+    
+    }
+}
+const dog= new Animal('Rover');
+dog.speak();//Rover makes a sound
 
+const duck=new Animal('Daffy');
+duck.speak();// output: Daffy makes a sound
+// this is intteresting, I can see some practical applications with this
 
+//Getters and Setters
+class Square{
+    constructor(width,height){
+        this._width=width;
+        this._height=height;
+    }
+    get area(){
+        return this._width * this._height;
+    }
+    set dimensions(value) {
+        [this._width, this._height]=value;
 
+    }
+}
+const square=new Square(4, 4);
+console.log(square.area);// appears this creates a new objecct of the class
 
+square.dimensions = [2,2];
+console.log(square.area);// appears this creates different dimensions for the 
+//above object, NOTICE that I need [] instead of () for the dimensions to work
 
+const square1=new Square(5, 5);
+console.log(square1.area);//this creates a new object in the class, returns 25
 
-
+//static methods
+class calculator{
+    static add(a, b){
+        return a +b;
+    }
+}
+console.log(calculator.add(5,3));//  Retunst 8. his is neat, static methods 
+// seem like they present more use cases as well. Helps me to wrap my head around the
+// code as I build things that I can imagine a real world application for.
 
 
 
