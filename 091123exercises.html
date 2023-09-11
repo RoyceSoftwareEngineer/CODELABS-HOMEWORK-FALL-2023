@@ -165,9 +165,30 @@ console.log(Utils.squareNumber(4));// returns the square of the number
 
 //getters and setters:
 //these are special methods that provide a way to access and set private class properties. 
-//They can also include additional logic
+//They can also include additional logic.
+//Example:
+class Box{
+    #width;
+    constructor(width){
+        this.#width=width;
+    }
+    get width(){
+        return this.#width;
+    }
+    set width(value){
+        if (value< 0){
+            console.log('width cannot be negative!');
+        } else{
+            this.width=value;
+        }
+    }
+}
 
+const box= new Box(100);
+console.log(box.width);
+box.width=-5;// If I remove the hashtags, the 'width cannot be negative' return is broken
 
+//~Exercise 1~//
 
 
 
