@@ -108,7 +108,7 @@ class DevTeamLead extends Employee{
         this.teammemebers= [];
     }
     addMember(employee){
-        this.teammemebers.push(employee);
+        this.teammembers.push(employee);
     }
     viewTeam(){
         let employeeNames = this.teammemebers.map((member) =>member.name);
@@ -120,12 +120,12 @@ class DevTeamLead extends Employee{
 //Usage:
 const seniorDev = new SoftwareDeveloper('Royce', 'Senior Developer');
 const companyDesigner = new FreelanceDesigner('Joey', 'Web Developer');
-const teamLead = new DevTeamLead ('Racehl', 'Dev Team Lead');
+const teamLead = new DevTeamLead ('Rachel', 'Dev Team Lead');
 
 teamLead.addMember(senior.Dev);
-teamLead.addMemeber(compnayDesigner);
+teamLead.addMember(compnayDesigner);
 
 console.groupCollapsed('Composites Pattern');
-console.log('Team memebers list', teamLead.viewTeam());
+console.log('Team members list', teamLead.viewTeam());
 console.groupEnd();
 
