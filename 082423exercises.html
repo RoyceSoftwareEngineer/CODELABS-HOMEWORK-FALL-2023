@@ -1,0 +1,172 @@
+ <!--exercise 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> My first web page!</h1>
+<p>"Welcome to the world of HTML!"</p>
+
+<img src="example.jpg" alt="A picture that wont show up as the url is fake.">
+    
+</body>
+</html>
+
+exercise 4
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .heading {
+                align-items: center;
+                color: black;
+            }
+
+            .paragraph {
+              margin-bottom: -100px;
+              z-index: 1;
+              position: absolute;
+            }
+
+            img {
+                margin-top: 100px; /* Add a margin to the top of the image to create space */
+            }
+
+            nav ul {
+                list-style-type: none;;
+                padding:2;
+            }
+            p, label{
+                font:1rem
+                'Fira Sans',
+                sans-serif;
+            }
+            input{
+                margin: 0.3rem;
+            }
+           /* this is the styling for my drop down menu*/
+           button:hover{
+            background-color: blueviolet;
+           }
+           .dropdown-options{
+            display:none;
+            position:absolute;
+            overflow:auto;
+            background-color:yellow;
+            border-radius:10px;
+            box-shadow: 0px 10px 10px 0px
+            rgba(0,0,0,0.4);
+           }
+        .dropdown:hover .dropdown-options{
+            display:block;
+        }
+        .dropdown-options a {
+          display:block;
+          color:#000;
+          padding:5px;
+          text-decoration-color: aqua;  
+          padding: 20px 40 px;
+        }
+        .dropdown-options a:hover {
+            color: #0a0a23;
+            background-color: #ddd;
+            border-radius:5px;
+        }
+
+
+        </style>
+    </head>
+    <body>
+      <h1 class="heading">This is a Heading</h1>
+      <p class="paragraph">This is a paragraph.</p>
+      <img src="https://www.techrepublic.com/wp-content/uploads/2022/08/learn-coding-automation-just-770x513.jpeg" alt="Example Image">
+       <P> 
+        <label for ="name">Please input your information below:</label>
+        </P>
+        <div>
+            <input type="text", id="name" name="name" required minlength="4", maxlength="20", size="13"/>
+            <fieldset>
+                <legend> please select your gender</legend>
+                <div>
+                <input type="radio" id="Male" name="Gender" value="Man" checked/>
+                <label for="Man">Man</label>
+            </div>
+            <div>
+                <input type="radio" id="Female" name="Gender" value="Woman" checked/>
+                <label for="Woman">Woman</label>
+            </div>
+            <div>
+                <input type="radio" id="Other" name="Gender" value="other" checked/>
+                <label for="Other">Other</label>
+            </div>
+        </fieldset>
+            <div class="dropdown">
+                <button> Select Country</button>
+                <div class="dropdown-options">
+                <a href="#"> USA</a>
+                <a href="#">Spain</a>
+                <a href="#">Panama</a>
+                <a href="#">Costa Rica</a>
+                <a href="#">Canada</a>
+                <a href="#">Mexico</a>
+            </div>
+        </div>
+            <p>
+                <legend> Please Agree to the Terms and Conditions</legend>
+                <div>
+                    <input type="checkbox" id="termsconditions"
+                    name="termsConditions"/>
+                    <label for="termsConditions">I agree</label>
+                </div>
+            </p>
+            <p>
+            <form>
+                <div>
+                    <label for="submit">Confirm submission Below</label>
+                </div>
+                <div>
+                    <input type="Submit" value="Submit"/>
+                </div>
+            </form>
+
+        </div>
+    </p>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+</html>--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <anv>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Cart</a></li>
+                <li> <a href="#">Contact Us</a></li>
+                <li> <a href="#">Warranties</a></li>
+                <li> <a href="#">New Products</a></li>
+
+
+            </ul>
+        </anv>
+    </header>
+    
+</body>
+</html>
